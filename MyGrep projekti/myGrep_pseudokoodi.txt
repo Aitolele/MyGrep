@@ -1,0 +1,73 @@
+main(komentoriviargumentit)
+
+    yritä
+
+        if (ei komentoriviargumentteja)
+            kysy käyttäjältä teksti
+            kysy hakusana
+            etsi hakusana tekstistä
+            if (löytyi)
+                tulosta löytymispaikka
+            else
+                tulosta "ei löytynyt"
+            lopeta ohjelma
+        endif
+
+
+        aseta oletusasetukset:
+            tulosta_rivinumerot = false
+            laske_osumat = false
+            käänteinen_haku = false
+            ohita_kirjainkoko = false
+
+
+        if (ensimmäinen argumentti alkaa '-')
+            lue valitsimet
+            lue hakusana
+            lue tiedostonimi
+        else
+            lue hakusana
+            lue tiedostonimi
+        endif
+
+
+        if (valitsimissa 'l')
+            tulosta_rivinumerot = true
+        if (valitsimissa 'o')
+            laske_osumat = true
+        if (valitsimissa 'r')
+            käänteinen_haku = true
+        if (valitsimissa 'i')
+            ohita_kirjainkoko = true
+
+
+        tarkista että tiedosto on olemassa lukemalla tiedoston koko, virheilmoitus jos ei onnistu
+        lue tiedosto riveiksi listaan
+
+
+        for jokainen rivi tiedostossa
+            etsi hakusana riviltä (huomioi kirjainkoko-asetus)
+
+            if (ei käänteinen_haku JA hakusana löytyi)
+                lisää rivinumero tuloslistaan
+            if (käänteinen_haku JA hakusanaa ei löytynyt)
+                lisää rivinumero tuloslistaan
+        endfor
+
+
+        for jokainen osumarivi
+            if (tulosta_rivinumerot)
+                tulosta rivinumero
+            tulosta rivi
+        endfor
+
+
+        if (laske_osumat)
+            tulosta osumien määrä
+        endif
+
+
+    ota kiinni mahdolliset virheet
+        tulosta virheilmoitus
+
+    palauta 0

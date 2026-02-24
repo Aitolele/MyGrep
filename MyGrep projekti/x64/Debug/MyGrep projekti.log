@@ -1,0 +1,4 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(538,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (MyGrep projekti.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  myGrepMain.cpp
+C:\Users\kalle\Desktop\Uusi kansio\C++ edistyneet\MyGrep projekti\MyGrep projekti\myGrepMain.cpp(100,22): warning C4244: 'return': conversion from 'std::streamoff' to 'long', possible loss of data
+  MyGrep projekti.vcxproj -> C:\Users\kalle\Desktop\Uusi kansio\C++ edistyneet\MyGrep projekti\x64\Debug\MyGrep_projekti.exe
